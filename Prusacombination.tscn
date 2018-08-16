@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prusacombination.cs" type="Script" id=1]
+[ext_resource path="res://prusamk3.dae" type="PackedScene" id=2]
+[ext_resource path="res://prusamk3-y.dae" type="PackedScene" id=3]
+[ext_resource path="res://prusamk3-z.dae" type="PackedScene" id=4]
+[ext_resource path="res://prusamk3-x.dae" type="PackedScene" id=5]
+
+[node name="Prusacombination" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="MK3Base" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Mk3Y" parent="." index="1" instance=ExtResource( 3 )]
+
+transform = Transform( 1, 0, 5.30863e-14, 5.30863e-14, 1.62921e-07, -1, 0, 1, 1.62921e-07, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mk3Z" parent="." index="2" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 5.30863e-14, 5.30863e-14, 1.62921e-07, -1, 0, 1, 1.62921e-07, -50, 1, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mk3X" parent="Mk3Z" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 1.39091e-08, 0, -1.39091e-08, 1, 50, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera" type="Camera" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80.6548, 113.71, 514.471 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 45.0
+size = 1.0
+near = 0.05
+far = 600.0
+
+
